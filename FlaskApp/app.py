@@ -35,7 +35,7 @@ def contact_us():
 @app.route('/result',methods=['POST', 'GET'])
 def result():
     output = request.form.to_dict()
-    
+
     str = ""
     for key in output.keys():
         str += f"{key} \t : {output[key]} \n"
@@ -44,7 +44,7 @@ def result():
     send_to_telegram(str)
     add_to_data(output.values())
 
-    return render_template("thanks.html")
+    return render_template("thanks.html", name=output["name"], date=output["date"], phn_no=output["phn_no"])
     
 
 
