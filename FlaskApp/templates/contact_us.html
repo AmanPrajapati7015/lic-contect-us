@@ -10,27 +10,66 @@
 	</head>
 	
 	<body>
+        <div class="header">
+            <h1>Get in touch</h1>
+            <p>Fill the following form to book an appointment or to get a call form us.</p>
+            <hr>
+        </div>
 
-        <form class="grid" action="/result" method="POST">
-           
-          <label for="name">Enter you name:</label>
-          <input type="text" id="name" name="name">
+        <form class="form" action="/result" method="POST">
 
-          <label for="email">Email ID:</label>
-          <input type="email" id="email" name="email">
+            <div class="gender-wrap">
+                <input type="radio" id="male" name="gender" value="Male">
+                <label for="male">Male</label>
+                <input type="radio" id="female" name="gender" value="Female">
+                <label for="female">Female</label>
+            </div>
+            
+            <input required type="text" id="name" name="name" placeholder="Name">
 
-          <center><input class="file_submit" type="Submit"></center>
+            <input required type="tel" id="phoneNo"
+             name="phn_no" placeholder="10 digit Mobile no"
+             minlength="10" maxlength="10" >
+
+             <label for="date">When should we contact you.</label>
+             <input required type="date" id="date" name="date">
+
+             <input required type="text" name="code" id="pinCode" placeholder="PinCode" 
+             minlength="6" maxlength="6">
+
+             <fieldset>
+                <legend>Annual Income (Lakhs)</legend>
+
+                <div class="field">
+                    <input type="radio" name="income" id="3-5" value="3-5">
+                    <label for="3-5"> 3-5 lpa</label>
+                </div>
+
+                <div class="field">
+                    <input type="radio" name="income" id="5-8" value="5-8">
+                    <label for="5-8"> 5-8 lpa</label>
+                </div>
+
+                <div class="field">
+                    <input type="radio" name="income" id="8-12" value="8-12">
+                    <label for="8-12"> 8-12 lpa</label>
+                </div>
+
+                <div class="field">
+                    <input type="radio" name="income" id="12-20" value="12-20">
+                    <label for="12-20"> 12-20 lpa</label>
+                </div>
+
+                <div class="field">
+                    <input type="radio" name="income" id="20+" value="20+">
+                    <label for="20+"> 20+ lpa</label>
+                </div>
+
+             </fieldset>
+
+          <button type="submit" class="submit">Submit</button> 
 
         </form>
-
-        
-
-        
-
-        
-        <br>
-        <br>
-        <br>
 
 
     </body>

@@ -1,105 +1,72 @@
-html,body{
-    margin: 0px;
-    padding: 0px;
-    list-style: none;
-    box-sizing: border-box;
-    font-family: 'Rubik';
-    letter-spacing: 3px;
+*{
+    padding: 0;
+    margin: 0;
+
+}
+
+body{
+    padding: 30px 15px;
+}
+h1{
+    margin: auto;
 }
 
 
-/* element */
-  
-.let_space{
-    letter-spacing: 2px;
+.form,
+div.header{
+    max-width: 350px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin: auto;
+    margin-bottom: 30px ;
+    font-size: 1rem;
 }
 
 
-.c_grid{
-    display: grid;
-    justify-items: center;
-    align-items: center;
-    grid-gap: 2vmax;
-}
-   
-.grid{
-    display: grid;
-    grid-gap: 2vmax;
-}
-   
-  
-   
-.box2{
-    grid-template-columns: 1fr 1fr;
-}
-  
-.box3{
-    grid-template-columns: 1fr 1fr 1fr;
-} 
-
-/* element */
-
-.table_cont{
-    overflow-x: scroll;
-    width: 70vw;
+fieldset{
+    display: flex;
+    flex-direction: column;
+    border: none;
+    gap: 5px;
 }
 
-table {
-    border-collapse: collapse;
-    letter-spacing: 3px;
-    /* width: 100%; */
+fieldset legend{
+    margin-bottom: 10px;
 }
 
-td, th {
-    border: 1px solid #dddddd;
-    text-align: center;
-    padding: 1vmax;
+input[type="text"],
+input[type="tel"],
+input[type="date"]{
+    padding: 10px;
+    outline: none;
+    font-size: 1rem;
+    border: 1px solid rgb(171, 171, 171);
+    border-radius: 5px;
+}
+
+input:focus{
+    border-color: green;
+    box-shadow: 3px 3px 3px rgb(181, 181, 181);
+}
+
+
+
+button.submit{
     width: fit-content;
+    padding: 5px 30px;
+    background-color: rgb(73, 80, 73);
+    border: 2px solid rgb(73, 80, 73);
+    color: white;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    align-self: center;
 }
 
-form{
-    margin: 2vmax 10vmax;
-    padding:3vmax;
-    border: 1px solid #dddddd;
-}
 
-label{
-    font-size: 1.5vmax;
-}
-
-input{
-    padding:1vmax;
-    font-size: 1.3vmax;
-    border: 1px solid #dddddd;
-    outline: none;
-}
-
-select{
-    padding:1vmax;
-    font-size: 1.3vmax;
-    border: 1px solid #dddddd;
-    outline: none;
-    letter-spacing: 3px;
-}
-
-option{
-    font-size: 1.5vmax;
-    letter-spacing: 3px;
-}
-
-.file_submit{
-  margin-top: 1vmax;
-  border: 1px solid #55acee;
-  outline: none;
-  background-color: #55acee;
-  color: white;
-  padding: 1vmax;
-  cursor: pointer;
-  transition: 0.3s;
-  letter-spacing: 3px;
-}
-
-.file_submit:hover{
-  background-color: white;
-  color: #55acee
+button.submit:hover{
+    box-shadow: 3px 3px 3px rgb(181, 181, 181);
+    color: rgb(73, 80, 73);
+    background-color: white;
 }

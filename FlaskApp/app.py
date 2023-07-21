@@ -1,6 +1,13 @@
 from flask import Flask, render_template, url_for, request
 import requests;
 
+
+# def sendToTel(str){
+#     import requests
+
+
+# }
+
 app = Flask(__name__)
 
  
@@ -20,7 +27,13 @@ def contact_us():
 def result():
     output = request.form.to_dict()
     print(output)
-    # name = output["name"]
+    str = ""
+    for key in output.keys():
+        str += f"{key} \t : {output[key]} \n"
+
+
+    # sendToTel(str)
+    print(str)
 
 
     return render_template("thanks.html")
