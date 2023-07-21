@@ -1,12 +1,21 @@
-from flask import Flask, render_template, url_for, request
-import requests;
+from flask import Flask, render_template, request
 
 
-# def sendToTel(str){
-#     import requests
 
+def send_to_telegram(message):
+    import requests
+    auth = "6206326589:AAGuXdrMMyFQIvm6kCACAh-7Jmdy8RgJJGU"
+    chat_id = "5768401131"
+    url = f"https://api.telegram.org/bot{auth}/sendMessage?chat_id={chat_id}&text={message}"
+    requests.get(url)
 
-# }
+def add_to_data(data_row):
+    import csv
+    f = open("data.csv", "a", newline='')
+    csvw = csv.writer(f)
+    csvw.writerow(data_row)
+    f.close()
+
 
 app = Flask(__name__)
 
@@ -26,15 +35,14 @@ def contact_us():
 @app.route('/result',methods=['POST', 'GET'])
 def result():
     output = request.form.to_dict()
-    print(output)
+    
     str = ""
     for key in output.keys():
         str += f"{key} \t : {output[key]} \n"
 
 
-    # sendToTel(str)
-    print(str)
-
+    send_to_telegram(str)
+    add_to_data(output.values())
 
     return render_template("thanks.html")
     
