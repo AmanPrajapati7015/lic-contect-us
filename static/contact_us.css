@@ -44,7 +44,7 @@ input[type="date"]{
     font-size: 1rem;
     border: 1px solid rgb(171, 171, 171);
     border-radius: 5px;
-    /* width: 100%; */
+    width: 100%;
 }
 
 input:focus{
