@@ -17,6 +17,7 @@ div.header{
     max-width: 350px;
     display: flex;
     flex-direction: column;
+    align-items: stretch;
     gap: 12px;
     margin: auto;
     margin-bottom: 30px ;
@@ -43,6 +44,7 @@ input[type="date"]{
     font-size: 1rem;
     border: 1px solid rgb(171, 171, 171);
     border-radius: 5px;
+    /* width: 100%; */
 }
 
 input:focus{
